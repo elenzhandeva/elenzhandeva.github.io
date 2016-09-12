@@ -1,0 +1,295 @@
+
+@import 'reset';
+@import 'mediaqueries.scss';
+
+/* VARIABLES */
+$purple-0: #f2e6ff;
+$purple-1: #e5ccff;
+
+
+$white:   #ffffff;
+$black:   #000000;
+$grey:    #9C9C9C;
+$gold:    #FFBC52;
+
+$pink-6:  rgba(241, 176, 233, 0.6);
+$pink-8:  rgba(241, 176, 233, 0.8);
+$grey-5:  rgba(1, 1, 1, 0.5);
+$grey-8:  rgba(1, 1, 1, 0.8);
+
+$max-contw: 1200px;
+$max-conth: 1000px;
+
+
+/* TYPOGRAPHY */
+text, h1, h2, h3, h4, p, a {
+  font-family: 'Philosopher', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+
+/* MAIN STYLES */
+body {
+  background-color: white;
+  /*color: navy;*/
+  margin: 0 auto;
+  clear: both;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+section {
+  padding-top: 7vh;
+}
+
+.flood-section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.flood-container {
+  /*height: 93vh;*/
+  /*margin-top: 7vh;*/
+  max-width: 1200px;
+  min-width: 150px;
+  /*max-height: 1000px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* HEADER STYLES */
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  /*background-color: white;*/
+  width: 100vw;
+  height: 7vh;
+  min-height: 30px;
+  max-height: 100px;
+  /*overflow: hidden;*/
+}
+
+.nav-bar {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  color: $purple-1;
+}
+
+.nav-logo-div {
+  /*height: 100%;
+  width: auto;*/
+  float: left;
+  width: 100px;
+  transform: rotate(-15deg);
+  z-index: 11;
+  position: absolute;
+  left: -5px;
+  top: -4px;
+  svg {
+    fill: none;
+    stroke: $black;
+    stroke-width: 6px;
+    stroke-miterlimit: 10;
+  }
+}
+
+.nav-menu {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 45px;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: $grey;
+
+  z-index: 10;
+
+  ul {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  li {
+    display: block;
+    margin: 5px 0;
+    padding: 5px 0;
+    /*background-color: $grey-5;*/
+  }
+
+  a {
+    display: block;
+    /*background-color: $grey-5;*/
+    color: $white;
+    padding: 9px;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  @include media-query(tablet-and-up) {
+    height: 7vh;
+    min-height: 40px;
+    max-height: 100px;
+    position: fixed;
+    right: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: transparent;
+
+    ul {
+      height: 100%;
+      text-align: left;
+      float: right;
+      background-color: transparent;
+    }
+
+    li {
+      display: inline;
+      background-color: transparent;
+    }
+
+    a {
+      display: inline;
+      color: black;
+      background-color: transparent;
+      padding: 10px;
+      &:hover {
+        background-color:  $grey-8;
+        color: white;
+      }
+    }
+  }
+}
+
+.nav-button {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  z-index: 10;
+  a {
+    color: $black;
+    padding: 0px 5px 0 5px;
+    font-size: 28px;
+    &:hover {
+      color: white;
+      background-color: $grey-5;
+    }
+  }
+
+  @include media-query(tablet-and-up){
+    display: none;
+  }
+}
+
+
+
+
+.banner {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.col-container {
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.col {
+  margin: auto;
+  float: left;
+  text-align: left;
+}
+
+.col-40 {
+  width: 100%;
+
+  @include media-query(tablet-and-up){
+    width: 40%;
+  }
+}
+
+.col-60 {
+  width: 100%;
+  padding-top: 5px;
+
+  @include media-query(tablet-and-up){
+    width: 60%;
+    padding-left: 15px;
+  }
+}
+
+.icon-wrapper {
+  width: 100%;
+  max-width: 120px;
+  min-width: 60px;
+
+  float: none;
+  margin: auto;
+
+  @include media-query(tablet-and-up){
+    float: right;
+  }
+
+}
+
+.social-icon {
+
+  fill: black;
+  stroke: white;
+  background-color: white;
+
+  border-radius: 20px;
+
+  &:hover{
+    fill: white;
+    stroke: black;
+    background-color: black;
+  }
+}
+
+.social-text {
+  margin: -5px auto 0 auto;
+  text-align: center;
+
+  @include media-query(tablet-and-up){
+    margin-top: 60px;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
