@@ -11,11 +11,11 @@
 // 	}
 // }
 
-function scrollTo(toSection){
-	console.log('Jump to: '+toSection);
-	$('body').animate({
-		scrollTop: $(toSection).offset().top - $('.nav-bar').height()}, 500);
-}
+// function scrollTo(toSection){
+// 	console.log('Jump to: '+toSection);
+// 	$('body').animate({
+// 		scrollTop: $(toSection).offset().top - $('.nav-bar').height()}, 500);
+// }
 
 function goTo(toSection){
 	console.log('Go to: '+toSection);
